@@ -1,0 +1,26 @@
+---
+interface Props{
+  name: string,
+  className?: string
+}
+
+type icMap = {
+  [key: string]: any
+}
+
+const {name, className = ""} = Astro.props;
+
+import Cart from "./icons/cart.astro";
+import Tool from "./icons/tool.astro"
+import PaintBucket from "./icons/paintBucket.astro";
+
+const iconMap:icMap = {
+  cart: Cart,
+  tool: Tool,
+  paintBucket: PaintBucket
+};
+
+const IconComponent = iconMap[name];
+---
+
+{IconComponent ? <IconComponent class={className} /> : null}
