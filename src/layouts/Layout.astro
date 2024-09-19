@@ -1,6 +1,7 @@
 ---
 
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
 	title: string;
@@ -23,8 +24,9 @@ const { title, description = "An e-commerce brand" ,image = "/images/logo.jpg"} 
 		<meta property="og:image" content={image} />
 		<title>{title}</title>
 	</head>
-	<body class="min-h-screen">
+	<body class="min-h-screen max-w-[80%] m-auto ">
 		<Header/>
 		<slot />
+		<Footer/>
 	</body>
 </html>

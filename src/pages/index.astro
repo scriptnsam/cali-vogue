@@ -1,9 +1,27 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h2 class="font-extralight text-4xl m-auto mt-5 py-5 w-[80%] text-center border border-red rounded-sm">Welcome To <span class="text-pink-600">Cali's Vogue</span></h2>
+	<main class="mt-5">
+		<section class="w-full py-12 md:py-12 lg:py-24 xl:py-36 bg-pink-600">
+			<div class="container px-4 md:px-6 m-auto">
+				<div class="flex flex-col items-center space-y-4 text-center">
+					<div class="space-y-2">
+						<h1 class="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl/none text-white">
+							Discover Unique Fashion, Accessories, & Decor
+						</h1>
+						<p class="mx-auto max-w-[700px] text-gray-300 md:text-xl">
+							Elevate your style and space with our handcrafted accessories, trendy fashion, and unique decor.
+						</p>
+					</div>
+					<div class="space-x-4">
+						<Button className='bg-pink-800 p-2 hover:bg-opacity-70 duration-200 rounded-md bg-opacity-80 text-white'>Shop Now</Button>
+						<Button className='bg-white p-2 rounded-md text-pink-600 hover:bg-opacity-85 duration-200 '>Learn More</Button>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 </Layout>
