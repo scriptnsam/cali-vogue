@@ -25,8 +25,62 @@ import SwiperComponent from '../components/Swiper'
 			</div>
 		</section>
 
+		<!-- swiper section -->
 		<section class="mt-5">
 			<SwiperComponent client:load/>
 		</section>
+
+		<!-- Product categories section -->
+		<section class="py-10 bg-gray-100">
+			<div class="container mx-auto px-4">
+				<h2 class="text-3xl font-bold text-center mb-6">Shop by Category</h2>
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+					
+					<!-- Category Item -->
+					<div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+						<img loading="lazy" src="https://i.pinimg.com/originals/01/e5/05/01e505d461b26ae103807eee110242a9.jpg" alt="Category 1" class="w-full h-40 object-cover transition-opacity duration-300 hover:opacity-75">
+						<div class="p-4">
+							<h3 class="text-lg font-semibold">Wears</h3>
+							<p class="text-gray-600">Explore our unique collection of wears.</p>
+							<a href="/category/wears" class="mt-2 inline-block text-blue-500 hover:underline">Shop Now</a>
+						</div>
+					</div>
+		
+					<!-- Category Item -->
+					<div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+						<img loading="lazy" src="https://2.bp.blogspot.com/-NZNN95fmN4Q/UnZCtNCM6eI/AAAAAAABMvQ/fSwKnmCMyP0/s1600/Unknown.jpeg" alt="Category 2" class="w-full h-40 object-cover transition-opacity duration-300 hover:opacity-75">
+						<div class="p-4">
+							<h3 class="text-lg font-semibold">Beads</h3>
+							<p class="text-gray-600">Discover beautiful handcrafted beads.</p>
+							<a href="/category/beads" class="mt-2 inline-block text-blue-500 hover:underline">Shop Now</a>
+						</div>
+					</div>
+		
+					<!-- Category Item -->
+					<div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+						<img loading="lazy" src="https://images.pexels.com/photos/4263995/pexels-photo-4263995.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Category 3" class="w-full h-40 object-cover transition-opacity duration-300 hover:opacity-75">
+						<div class="p-4">
+							<h3 class="text-lg font-semibold">Footwear</h3>
+							<p class="text-gray-600">Find the perfect pair of shoes.</p>
+							<a href="/category/footwear" class="mt-2 inline-block text-blue-500 hover:underline">Shop Now</a>
+						</div>
+					</div>
+		
+					<!-- Category Item -->
+					<div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+						<img loading="lazy" src="https://d1dq9tiesi76an.cloudfront.net/pub/media/catalog/product/cache/1/image/e9c3970ab036de70892d86c6d221abfe/2/7/27725.jpg" alt="Category 4" class="w-full h-40 object-cover transition-opacity duration-300 hover:opacity-75">
+						<div class="p-4">
+							<h3 class="text-lg font-semibold">Cups</h3>
+							<p class="text-gray-600">Explore our unique cup designs.</p>
+							<a href="/category/cups" class="mt-2 inline-block text-blue-500 hover:underline">Shop Now</a>
+						</div>
+					</div>
+		
+					<!-- Add more categories as needed -->
+				</div>
+			</div>
+		</section>
+		
+		
 	</main>
 </Layout>
