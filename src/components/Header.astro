@@ -1,15 +1,57 @@
 ---
-import Icon from "./Icon.astro"
+import Icon from "./Icon.astro";
 ---
-<div class="border-b-2 border-b-black pb-2 flex items-center justify-between px-2 py-1">
-  <div>
-    <h2 class="text-4xl text-pink-600 font-extralight"><a href="./" class="flex items-center">Cali's Vogue <Icon name="cart" className="text-2xl mt-3"/></a></h2>
-  </div>
 
-  <div class="flex items-center justify-between">
-    <div class="mx-6 cursor-pointer hover:text-pink-600 duration-100 text-black text-[20px] "><a href="./">Home</a></div>
-    <div class="mx-6 cursor-pointer hover:text-pink-600 duration-100 text-black text-[20px] "><a href="./shop">Shop</a></div>
-    <div class="mx-6 cursor-pointer hover:text-pink-600 duration-100 text-black text-[20px] "><a href="./cart">Cart</a></div>
-    <div class="mx-6 cursor-pointer hover:text-pink-600 duration-100 text-black text-[20px] "><a href="./profile">Profile</a></div>
-  </div>
-</div>
+      <div class="bg-pink-600 pb-2 flex flex-col items-center justify-center px-2 py-1 sm:flex-row sm:items-center sm:justify-between">
+        <div class="sm:space-x-2 flex items-center max-sm:justify-between max-sm:w-[100%]">
+          <h2 class="text-3xl text-white font-extralight sm:text-4xl">
+            <a href="./" class="flex items-center">
+              Cali's Vogue
+              <Icon name="cart" className="text-2xl mt-3" />
+            </a>
+          </h2>
+          <span class="sm:hidden block mt-2" id="menuBtn">
+            <Icon name="menu" className="text-4xl " />
+          </span>
+        </div>
+
+        <nav class="hidden sm:flex sm:items-center sm:justify-between">
+          <div class="mx-6 cursor-pointer hover:text-pink-100 duration-100 text-white text-[20px] sm:mx-4">
+            <a href="./">Home</a>
+          </div>
+          <div class="mx-6 cursor-pointer hover:text-pink-100 duration-100 text-white text-[20px] sm:mx-4">
+            <a href="./category">Category</a>
+          </div>
+          <div class="mx-6 cursor-pointer hover:text-pink-100 duration-100 text-white text-[20px] sm:mx-4">
+            <a href="./cart" class="flex items-center space-x-1">
+              <span>Cart</span>
+              <Icon name="cart" className="mt-1" />
+            </a>
+          </div>
+          <div class="mx-6 cursor-pointer hover:text-pink-100 duration-100 text-white text-[20px] sm:mx-4">
+            <a href="./profile" class="flex items-center space-x-1">
+              <span>Account</span>
+              <Icon name="account" className="mt-1" />
+            </a>
+          </div>
+        </nav>
+      </div>
+
+      <div id="mobile-menu" class="hidden sm:hidden bg-pink-600 bg-opacity-30">
+        <ul class="p-4">
+          <li class="py-2">
+            <a href="./" class="block text-black hover:text-pink-600">Home</a>
+          </li>
+          <li class="py-2">
+            <a href="./category" class="block text-black hover:text-pink-600">Category</a>
+          </li>
+          <li class="py-2">
+            <a href="./cart" class="block text-black hover:text-pink-600">Cart</a>
+          </li>
+          <li class="py-2">
+            <a href="./profile" class="block text-black hover:text-pink-600">Account</a>
+          </li>
+        </ul>
+      </div>
+
+      <script type="module" src="../src/js/menu.js"></script>

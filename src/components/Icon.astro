@@ -13,11 +13,15 @@ const {name, className = ""} = Astro.props;
 import Cart from "./icons/cart.astro";
 import Tool from "./icons/tool.astro"
 import PaintBucket from "./icons/paintBucket.astro";
+import Account from "./icons/account.astro";
+import Menu from "./icons/menu.astro";
 
 const iconMap:icMap = {
   cart: Cart,
   tool: Tool,
-  paintBucket: PaintBucket
+  paintBucket: PaintBucket,
+  account: Account,
+  menu: Menu
 };
 
 const IconComponent = iconMap[name];
