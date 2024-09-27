@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      API_URL: ${{ secrets.PUBLIC_HOME_URL }}   # GitHub Secrets
+      PUBLIC_HOME_URL: ${{ secrets.PUBLIC_HOME_URL }}   # GitHub Secrets
       NODE_ENV: "production"
 
     steps:
@@ -36,4 +36,3 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist  # Specify your output directory here
