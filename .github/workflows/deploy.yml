@@ -5,13 +5,17 @@ on:
     branches:
       - master
 
+permissions:
+  id-token: write  # Add this to grant the required permission
+  contents: read   # This grants access to repository contents
+
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
       # Set environment variables here or reference GitHub Secrets
       API_URL: ${{ secrets.PUBLIC_HOME_URL }}   # From GitHub Secrets
-      NODE_ENV: "production"                    # Example of a non-sensitive variable
+      NODE_ENV: "production"   # Example of a non-sensitive variable
 
     steps:
       # Step 1: Checkout the repository
@@ -32,13 +36,10 @@ jobs:
       - name: Build Astro project
         run: npm run build
 
-  # Deployment job to GitHub Pages
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       # Step 1: Checkout repository again for deployment
       - name: Checkout repository
@@ -48,3 +49,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          publish_dir: ./dist  # Ensure this matches your Astro output directory
