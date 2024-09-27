@@ -11,5 +11,5 @@ export default defineConfig({
     applyBaseStyles: false
   }), react()],
   site: 'https://scriptnsam.github.io',
-  base: 'cali-vogue'
+  base: '/cali-vogue/'
 });
