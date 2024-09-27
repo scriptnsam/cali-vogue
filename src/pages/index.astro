@@ -4,7 +4,7 @@ import Button from '../components/Button.astro';
 import SwiperComponent from '../components/Swiper'
 ---
 
-<Layout title="Cali's Vogue">
+<Layout title="Cali's Vogue" image='/logo.jpg'>
 	<main class="mt-0">
 		<section class="w-full py-12 md:py-12 lg:py-24 xl:py-36 bg-pink-600">
 			<div class="container px-4 md:px-6 m-auto">
@@ -80,6 +80,50 @@ import SwiperComponent from '../components/Swiper'
 				</div>
 			</div>
 		</section>
+
+		<!-- Sales and promotions section -->
+		<section class="py-12 bg-gray-100">
+			<div class="container mx-auto px-4 text-center">
+				<h2 class="text-4xl font-bold text-pink-600 mb-4">Special Sales & Promotions</h2>
+				<p class="text-gray-700 text-lg mb-8">Don't miss out on our exclusive deals and limited-time offers!</p>
+				
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+					
+					<!-- Promotion Item -->
+					<div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+						<img src="https://static.vecteezy.com/system/resources/previews/002/261/679/original/50-percent-off-sale-tag-sale-of-special-offers-discount-with-the-price-is-50-percent-vector.jpg" alt="Promotion 1" class="w-full sm:h-36 h-48 sm:h-36 object-cover">
+						<div class="p-6 text-center">
+							<h3 class="text-2xl font-bold text-pink-600 mb-2">50% Off All Footwear</h3>
+							<p class="text-gray-600 mb-4">Shop now and save big on all footwear. Limited time only!</p>
+							<a href="/category/footwear" class="inline-block px-6 py-2 bg-pink-600 text-white font-semibold rounded hover:bg-pink-700 transition-colors">Shop Now</a>
+						</div>
+					</div>
+		
+					<!-- Promotion Item -->
+					<div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+						<img src="https://static.vecteezy.com/system/resources/thumbnails/011/935/890/small_2x/20-percent-off-special-offer-gold-lettering-numbers-brush-drawing-hand-drawn-sketch-vector.jpg" alt="Promotion 2" class="w-full h-48 sm:h-36 object-cover">
+						<div class="p-6 text-center">
+							<h3 class="text-2xl font-bold text-pink-600 mb-2">20% Off Jewelry</h3>
+							<p class="text-gray-600 mb-4">Add some sparkle with handcrafted jewelry at 20% off.</p>
+							<a href="/category/jewelry" class="inline-block px-6 py-2 bg-pink-600 text-white font-semibold rounded hover:bg-pink-700 transition-colors">Shop Now</a>
+						</div>
+					</div>
+		
+					<!-- Promotion Item -->
+					<div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+						<img src="https://img.freepik.com/premium-vector/buy-1-free-get-1-sale-banner-vector-illustration_275806-1557.jpg?w=2000" alt="Promotion 3" class="w-full h-48 sm:h-36 object-cover">
+						<div class="p-6 text-center">
+							<h3 class="text-2xl font-bold text-pink-600 mb-2">Buy 1 Get 1 Free</h3>
+							<p class="text-gray-600 mb-4">Exclusive offer on select categories. Grab yours now!</p>
+							<a href="/category/bogo" class="inline-block px-6 py-2 bg-pink-600 text-white font-semibold rounded hover:bg-pink-700 transition-colors">Shop Now</a>
+						</div>
+					</div>
+		
+				</div>
+			</div>
+		</section>
+		
+		
 		
 		
 	</main>

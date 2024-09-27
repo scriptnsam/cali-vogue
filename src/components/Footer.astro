@@ -1,7 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import Icon from "./Icon.astro";
+import Logo from "../../public/logo.jpg"
 ---
 
-<footer class="bg-black text-white py-4 px-6 mt-8">
+<footer class="bg-black text-white py-4 px-6 mt-8 flex items-center justify-between">
+  <Image alt={'fsdfsf'} src={Logo} width={30} height={40}/>
   <p>&copy; 2024 Cali's Vogue</p>
 </footer>
